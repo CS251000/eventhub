@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function WebsiteBuilder() {
+export default function Page() {
   return (
     <div>
-        webbuildrr
+        aboutus
       
     </div>
   )

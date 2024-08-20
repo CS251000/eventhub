@@ -14,17 +14,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    
-    <html lang="en">
-      <body className={inter.className}>
-        <main className="flex-grow">
-              {children}
-            </main>
-        
+      <html lang="en">
+        <body className={`${inter.className} flex flex-col min-h-screen`}>
+          {/* Navbar section */}
+          <header>
+            <div className="hidden lg:block">
+              <Nav />
+            </div>
+            <div className="block lg:hidden">
+              <MobileNav />
+            </div>
+          </header>
+
+          {/* Main content section */}
+          <div className="flex-grow ">
+            {children}
+          </div>
         </body>
-    </html>
+      </html>
     </ClerkProvider>
-    
-    
   );
 }

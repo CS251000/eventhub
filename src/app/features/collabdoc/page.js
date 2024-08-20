@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function SponsiManager() {
+export default function Page() {
   return (
     <div>
-        sponsi
+        collabdoc
       
     </div>
   )

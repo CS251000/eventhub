@@ -115,11 +115,13 @@ export default function MobileNav() {
                       >
                         Solutions
                       </button>
+                      <Link href={'/aboutus'}>
                       <button
                         className="block w-full text-left -mx-3 rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-800"
                       >
                         About Us
                       </button>
+                      </Link>
                     </>
                   )}
                   {featuresOpen && (

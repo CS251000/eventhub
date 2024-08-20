@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ParticipationManager() {
+export default function AssignedHero() {
   return (
     <div>
-        parts
+        assigned hero
       
     </div>
   )

@@ -15,14 +15,14 @@ import {
 import Link from "next/link";
 import { features, solutions } from "@/data/datas";
 
-import { SignInButton,SignedOut,SignedIn,UserButton } from '@clerk/nextjs'
+  import { SignInButton,SignedOut,SignedIn,UserButton } from '@clerk/nextjs'
 import Image from "next/image";
 
 export default function Nav() {
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className=" inset-x-0 top-0 -z-10 block">
       <nav
-        className="flex items-center justify-center p-4 lg:px-10 "
+        className="flex items-center justify-center px-4 py-0 lg:px-10 bg-gray-900 "
       >
         <div className="flex lg:flex-1">
           <Link href={"/"}>
@@ -76,11 +76,11 @@ export default function Nav() {
           
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          
+            <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/aboutus">
               About Us
             </NavigationMenuLink>
-          </Link>
+          
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
