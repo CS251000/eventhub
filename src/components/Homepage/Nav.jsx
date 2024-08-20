@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Button } from "../ui/button";
 import {
@@ -14,23 +15,24 @@ import {
 import Link from "next/link";
 import { features, solutions } from "@/data/datas";
 
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignInButton,SignedOut,SignedIn,UserButton } from '@clerk/nextjs'
+import Image from "next/image";
 
 export default function Nav() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        // aria-label="Global"
-        className="flex items-center justify-center p-6 lg:px-10"
+        className="flex items-center justify-center p-4 lg:px-10 "
       >
         <div className="flex lg:flex-1">
           <Link href={"/"}>
             <span className="-m-1.5 p-1.5">
               <span className="sr-only">EventHub</span>
-              <img
+              <Image
                 alt="logo"
-                src="assets/images/logo2.png"
-                className="h-20 w-30"
+                src="/assets/images/logo2.png"
+                height={200}
+                width={250}
               />
             </span>
           </Link>

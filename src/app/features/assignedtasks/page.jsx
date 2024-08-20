@@ -6,12 +6,12 @@ import Nav from "@/components/Homepage/Nav";
 export default function Home() {
   return (
     
-    <div className=" text-gray-900">
+    <div className="bg-gray-900 text-gray-100">
       <div className="flex flex-col ">
         <div className="block lg:hidden "><MobileNav/></div>
         <div className="hidden lg:block"><Nav/></div>
         </div>
-    <HomeHero/>
+    
     </div>
     
   );

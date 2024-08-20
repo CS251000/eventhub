@@ -1,9 +1,17 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 import { Bars3Icon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { features, solutions } from "@/data/datas";
-import { SignInButton, SignedIn, SignedOut,UserButton } from "@clerk/nextjs";
+import { SignInButton,SignedOut,SignedIn,UserButton } from '@clerk/nextjs'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,36 +43,36 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="bg-gray-900 text-gray-100 flex items-center justify-between p-4">
+    <div className="bg-gray-900 text-gray-100 flex items-center justify-between p-4 z-10">
       <SignedOut>
-          <SignInButton mode="modal">
-            <button className="text-sm font-semibold leading-6 text-blue-100">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </button>
-          </SignInButton>
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+        <SignInButton mode="modal">
+          <button className="text-sm font-semibold leading-6 text-blue-100">
+            Log in <span aria-hidden="true">&rarr;</span>
+          </button>
+        </SignInButton>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
       <div className="flex items-center">
         <Link href="/" className="mr-auto">
           <span className="sr-only">EventHub</span>
           <Image
-            src={'/assets/images/logo2.png'}
+            src={"/assets/images/logo2.png"}
             alt="logo"
             height={180}
             width={200}
           />
         </Link>
       </div>
-      
-      <div className="flex items-center space-x-7">
-        
+
+      <>
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild>
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
+              onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -77,8 +85,8 @@ export default function MobileNav() {
                 <Image
                   alt="logo"
                   src={"/assets/images/logo2.png"}
-                  height={30}
-                  width={50}
+                  height={150}
+                  width={180}
                 />
               </Link>
               <button
@@ -139,12 +147,12 @@ export default function MobileNav() {
                     </ul>
                   )}
                 </div>
-                
               </div>
             </div>
           </SheetContent>
         </Sheet>
-      </div>
+      </>
     </div>
   );
 }
+

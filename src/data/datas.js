@@ -1,28 +1,28 @@
 export const features = [
     {
       title: "Website Builder",
-      href: "/website-builder",
+      href: "/features/website-builder",
       description: "Create instant website personalized for your event",
     },
     {
       title: "Sponsorship Management",
-      href: "/sponsi-manager",
+      href: "/features/sponsi-manager",
       description: "Manage your Sponsorship easily and efficiently",
     },
     {
         title: "Collaborative Documents",
-        href: "/collabdoc",
+        href: "/features/collabdoc",
         description: "Write and update docs collaboratively",
       },
       {
         title: "Assigned Tasks",
-        href: "/assignedtasks",
+        href: "/features/assignedtasks",
         description: "Quickly check and update the tasks assigned to students",
       },
 
     {
       title: "Participation Manager",
-      href: "/participation-manager",
+      href: "/features/participation-manager",
       description: "Manage your attendees with ease",
     },
   ];
